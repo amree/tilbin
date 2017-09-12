@@ -12,7 +12,7 @@ gem "delayed_job_active_record"
 gem "flutie"
 gem "honeybadger"
 gem "jquery-rails"
-gem "pg"
+gem "mysql2"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.3"
@@ -24,7 +24,6 @@ gem "sprockets", ">= 3.0.0"
 gem "suspenders"
 gem "title"
 gem "uglifier"
-
 
 group :development do
   gem "listen"
@@ -60,7 +59,7 @@ group :production do
   gem "rack-timeout"
 end
 
-gem 'high_voltage'
-gem 'bourbon', '~> 5.0.0.beta.8'
-gem 'neat', '~> 2.1'
-gem 'refills', group: [:development, :test]
+gem "high_voltage"
+gem "bourbon", "~> 5.0.0.beta.8"
+gem "neat", "~> 2.1"
+gem "refills", group: [:development, :test]
