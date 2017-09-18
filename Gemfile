@@ -28,6 +28,7 @@ gem "uglifier"
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
+  gem "rubocop", require: false
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
