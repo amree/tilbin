@@ -9,7 +9,7 @@ development: &default
 
 test:
   <<: *default
-  database: tilbin_test
+  url:  <%= ENV.fetch("DATABASE_TEST_URL", "") %>
 
 production: &deploy
   encoding: utf8
