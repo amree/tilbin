@@ -27,6 +27,7 @@ gem "uglifier"
 
 group :development do
   gem "listen"
+  gem "overcommit", require: false
   gem "rack-mini-profiler", require: false
   gem "rubocop", require: false
   gem "spring"
