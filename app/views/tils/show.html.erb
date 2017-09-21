@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Notes</strong>
+  <%= @til.notes %>
+</p>
+
+<p>
+  <strong>Notes html:</strong>
+  <%= @til.notes_html %>
+</p>
+
+<p>
+  <strong>Is draft:</strong>
+  <%= @til.is_draft %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @til.published_at %>
+</p>
+
+<%= link_to 'Edit', edit_til_path(@til) %> |
+<%= link_to 'Back', tils_path %>
