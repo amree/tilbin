@@ -4,6 +4,6 @@ class Til < ApplicationRecord
   protected
 
   def build_notes_output
-    self.notes_html = notes
+    self.notes_html = MarkdownParser.process(notes)
   end
 end
