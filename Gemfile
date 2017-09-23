@@ -1,15 +1,11 @@
 source "https://rubygems.org"
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 ruby "2.4.1"
 
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
 gem "flutie"
+gem "high_voltage"
 gem "honeybadger"
 gem "jquery-rails"
 gem "kramdown"
@@ -62,8 +58,3 @@ end
 group :production do
   gem "rack-timeout"
 end
-
-gem "high_voltage"
-gem "bourbon", "~> 5.0.0.beta.8"
-gem "neat", "~> 2.1"
-gem "refills", group: [:development, :test]
