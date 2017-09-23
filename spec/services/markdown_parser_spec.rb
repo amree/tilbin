@@ -11,5 +11,18 @@ describe MarkdownParser, type: :model do
         "<p>This <em>is</em> markdown text</p>\n"
       )
     end
+
+    it "enables GFM when calling the markdown processor" do
+      text = "sample text"
+      options = { input: "GFM" }
+      parser = double("Kramdown::Document")
+      allow(parser).to receive(:to_html)
+
+      expect(parser).to receive(:new).with(text, options).and_return(
+        Kramdown::Document.new(text)
+      )
+
+      MarkdownParser.process(text, parser)
+    end
   end
 end

@@ -1,17 +1,18 @@
 class MarkdownParser
-  def initialize(text)
+  def initialize(text, parser)
     @text = text
+    @parser = parser
   end
 
   def run
-    Kramdown::Document.new(text).to_html
+    parser.new(text, input: "GFM").to_html
   end
 
-  def self.process(text)
-    MarkdownParser.new(text).run
+  def self.process(text, parser = Kramdown::Document)
+    MarkdownParser.new(text, parser).run
   end
 
   private
 
-  attr_reader :text
+  attr_reader :text, :parser
 end
