@@ -2,6 +2,7 @@
   "name": "tilbin",
   "private": true,
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "spectre.css": "^0.4.2"
   }
 }
