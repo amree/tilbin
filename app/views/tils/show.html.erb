@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Notes</strong>
-  <%= @til.notes %>
+<strong>Slug:</strong>
+<%= @til.slug %>
 </p>
 
 <p>
-  <strong>Notes html:</strong>
-  <%= @til.notes_html %>
+  <strong>Title:</strong>
+  <%= @til.title %>
 </p>
 
 <p>
-  <strong>Is draft:</strong>
-  <%= @til.is_draft %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @til.published_at %>
+  <strong>Notes:</strong>
+  <%= @til.notes_html.html_safe %>
 </p>
 
 <%= link_to 'Edit', edit_til_path(@til) %> |

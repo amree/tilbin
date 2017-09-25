@@ -46,10 +46,8 @@ class TilsController < ApplicationController
 
   def til_params
     params.require(:til).permit(
-      :notes_input,
-      :notes_output,
-      :is_draft,
-      :published_at
+      :title,
+      :notes
     )
   end
 end

@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Notes input</th>
-      <th>Notes output</th>
-      <th>Is draft</th>
-      <th>Published at</th>
+      <th>Slug</th>
+      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +14,8 @@
   <tbody>
     <% @tils.each do |til| %>
       <tr>
-        <td><%= til.notes_input %></td>
-        <td><%= til.notes_output %></td>
-        <td><%= til.is_draft %></td>
-        <td><%= til.published_at %></td>
+        <td><%= til.slug %></td>
+        <td><%= til.title %></td>
         <td><%= link_to 'Show', til %></td>
         <td><%= link_to 'Edit', edit_til_path(til) %></td>
         <td><%= link_to 'Destroy', til, method: :delete, data: { confirm: 'Are you sure?' } %></td>
