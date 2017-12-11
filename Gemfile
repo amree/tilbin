@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 ruby "2.4.2"
 
 gem "autoprefixer-rails"
+gem "bootstrap", "~> 4.0.0.beta2.1"
 gem "delayed_job_active_record"
 gem "flutie"
 gem "high_voltage"
