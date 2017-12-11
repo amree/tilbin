@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :til do
     title Faker::Lorem.sentence
     notes Faker::Lorem.paragraph
