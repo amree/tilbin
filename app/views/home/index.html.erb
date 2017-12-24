@@ -1,1 +1,29 @@
-Home#index
+<p id="notice"><%= notice %></p>
+
+<h1>Tils</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slug</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tils.each do |til| %>
+      <tr>
+        <td><%= til.slug %></td>
+        <td><%= til.title %></td>
+        <td><%= link_to 'Show', til %></td>
+        <td><%= link_to 'Edit', edit_til_path(til) %></td>
+        <td><%= link_to 'Destroy', til, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Til', new_til_path %>

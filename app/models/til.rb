@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 class Til < ApplicationRecord
+  belongs_to :user
+
   validates :notes, presence: true
   validates :title, presence: true
+  validates :user, presence: true
 
   before_save :build_slug
   before_save :build_notes_output

@@ -7,3 +7,6 @@ Style/StringLiterals:
 
 Style/WordArray:
   EnforcedStyle: brackets
+
+Style/SymbolArray:
+  EnforcedStyle: brackets

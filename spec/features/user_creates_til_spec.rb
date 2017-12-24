@@ -12,6 +12,6 @@ feature "User creates TIL" do
     fill_in "Notes", with: "This is a *bold* text"
     click_button "Publish"
 
-    expect(current_path).to include "/tils/#{Til.last.id}"
+    expect(current_path).to eq "/tils/#{Til.last.id}"
   end
 end

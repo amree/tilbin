@@ -9,4 +9,6 @@ class User < ApplicationRecord
     :trackable,
     :validatable
   )
+
+  has_many :tils
 end

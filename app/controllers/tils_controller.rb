@@ -1,22 +1,23 @@
+# frozen_string_literal: true
+
 class TilsController < ApplicationController
   before_action :set_til, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tils = Til.all
+    @tils = current_user.tils.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @til = Til.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @til = Til.new(til_params)
+    @til.user_id = current_user.id
 
     if @til.save
       redirect_to @til, notice: "Til was successfully created."
@@ -41,7 +42,7 @@ class TilsController < ApplicationController
   private
 
   def set_til
-    @til = Til.find(params[:id])
+    @til = current_user.tils.find(params[:id])
   end
 
   def til_params

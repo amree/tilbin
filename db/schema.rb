@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213200118) do
+ActiveRecord::Schema.define(version: 20171223135631) do
 
   create_table "delayed_jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "priority", default: 0, null: false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20171213200118) do
   end
 
   create_table "tils", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.string "slug"
     t.string "title"
     t.text "notes"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20171213200118) do
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tils_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -54,4 +56,5 @@ ActiveRecord::Schema.define(version: 20171213200118) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "tils", "users"
 end

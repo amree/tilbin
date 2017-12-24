@@ -3,8 +3,10 @@
 require "rails_helper"
 
 describe Til, type: :model do
+  it { should belong_to(:user) }
   it { should validate_presence_of(:notes) }
   it { should validate_presence_of(:title) }
+  it { should validate_presence_of(:user) }
 
   describe "#notes_html" do
     it "generates notes_html on save" do

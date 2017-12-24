@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :til do
-    title Faker::Lorem.sentence
-    notes Faker::Lorem.paragraph
+    association :user
+    title { Faker::Lorem.sentence }
+    notes { Faker::Lorem.paragraph }
 
     trait :published do
       published_at Time.current
