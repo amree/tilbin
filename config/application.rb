@@ -25,5 +25,9 @@ module Tilbin
     config.load_defaults 5.1
     config.generators.system_tests = nil
     config.active_job.queue_adapter = :delayed_job
+
+    config.to_prepare do
+      Devise::SessionsController.layout "single"
+    end
   end
 end

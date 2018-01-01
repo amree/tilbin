@@ -1,0 +1,35 @@
+.navigation {
+  background-color: $black;
+  color: $white;
+}
+
+.navigation__container {
+  @include make-container();
+  @include make-container-max-widths();
+
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.navigation__brand {
+  flex-grow: 0;
+}
+
+.navigation__items {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.navigation__item {
+  margin-right: 1rem;
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
