@@ -1,0 +1,61 @@
+.sign-up {
+  @include make-cont();
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    max-width: #{map-get($container-max-widths, lg)};
+  }
+}
+
+.sign-up__header {
+  @include make-col(12);
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.sign-up__lead {
+  color: $shuttle-gray;
+  margin-top: 2px;
+}
+
+.sign-up__content {
+  @include make-row();
+}
+
+.sign-up__guides {
+  @include make-col-xs(12);
+  @include make-col-md(4);
+
+  margin-bottom: 1rem;
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .card-header {
+    font-weight: 600;
+  }
+}
+
+.sign-up__form {
+  @include make-col-xs(12);
+  @include make-col-md(8);
+  @include media-breakpoint-up(md) {
+    order: -1;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .form-inputs {
+    margin-top: 1rem;
+  }
+}
+
+
+.sign-up__agreement {
+  font-size: 90%;
+  margin-bottom: 0;
+}
