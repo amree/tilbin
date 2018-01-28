@@ -1,0 +1,17 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.5.0
+env:
+  global:
+    - SECRET_KEY_BASE="768e73375b619fd2cecfdbc99cde842898393e19d535133516129f1ea13888a615db4272057ab1ef1f3a43ef62ea42f3d47cdab7ae30afa12345e2769f8dfc0b"
+    - DATABASE_TEST_URL="mysql2://root:@localhost/tilbin_test"
+script:
+  - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
+  - bundle exec rspec
+before_script:
+  - mysql -e "create database tilbin_test"
+notifications:
+  - email:
+    on_success: never
+# bundler_args: --binstubs=./bundler_stubs
