@@ -10,5 +10,9 @@ class User < ApplicationRecord
     :validatable
   )
 
+  validates :username, uniqueness: true
+  validates :username, presence: true
+  validates :name, presence: true
+
   has_many :tils
 end
