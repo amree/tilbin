@@ -6,6 +6,7 @@ ruby "2.5.0"
 
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 4.0.0"
+gem "delayed_job", "~> 4.1.4"
 gem "delayed_job_active_record"
 gem "devise"
 gem "flutie"
