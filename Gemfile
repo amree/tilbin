@@ -23,7 +23,6 @@ gem "sassc-rails"
 gem "simple_form"
 gem "skylight"
 gem "sprockets", ">= 3.0.0"
-gem "suspenders"
 gem "title"
 gem "uglifier"
 
