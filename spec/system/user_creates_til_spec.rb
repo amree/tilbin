@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "User creates TIL" do
+describe "User creates TIL" do
   scenario "successfully creates a new TIL" do
     user = FactoryBot.create(:user)
     login_as(user)

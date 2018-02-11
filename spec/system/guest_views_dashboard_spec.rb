@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "Guest views Dashboard" do
+describe "Guest views Dashboard" do
   scenario "Redirected to the login page" do
     visit dashboard_index_path
 

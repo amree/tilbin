@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "User views Dashboard" do
+describe "User views Dashboard" do
   scenario "Ables to view the dashbord page" do
     user = FactoryBot.create(:user)
     login_as(user)

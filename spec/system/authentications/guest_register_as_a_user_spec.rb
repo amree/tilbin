@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "Guest register as a user" do
+describe "Guest register as a user" do
   scenario "successfully redirected" do
     visit new_user_registration_path
 

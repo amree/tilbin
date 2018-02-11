@@ -2,8 +2,8 @@
 
 require "rails_helper"
 
-feature "User creates TIL" do
-  scenario "successfully creates a new TIL" do
+describe "User creates TIL" do
+  it "successfully creates a new TIL" do
     til = FactoryBot.create(:til)
     other_til = FactoryBot.create(:til)
     login_as(til.user)

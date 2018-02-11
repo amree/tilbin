@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "User sign in" do
+describe "User sign in" do
   scenario "successfully redirected" do
     user = create(:user, password: "password")
 

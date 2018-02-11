@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-feature "Guest accessing protected pages" do
+describe "Guest accessing protected pages" do
   scenario "to create new TIL will be redirected to sign in page" do
     visit new_til_path
 
